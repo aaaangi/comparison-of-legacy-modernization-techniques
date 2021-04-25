@@ -1,21 +1,16 @@
-%Vorlage fuer Thesen an der FFHS
 \documentclass{ffhsthesis}
 
 \usepackage[utf8]{inputenc}
 
-
 \begin{document}
 
-\dokumentTyp{Bachelor/Master-Thesis}
-\studiengang{INF/WI}
-\title{Titel der Thesis}
-\subtitle{Optionaler Untertitel} % optional
-\titelbild[height=2cm,width=10cm]{ffhslogo}  % optional
-\author{Mein Vor- und Nachname}
-% \date{}
-\wohnort{Mein Wohnort}
-%\referent{Name des Referenten\\ Titel\\Unterrichtetes Fach}
-\referentin{Name der Referentin\\ Titel\\Unterrichtetes Fach}
+\dokumentTyp{Bachelor-Thesis}
+\studiengang{INF}
+\title{Vergleich von Legacy-Modernisierungstechniken}
+\titelbild[height=3.5cm,width=3.5cm]{img/title-icon} 
+\author{Angela Scherer}
+\wohnort{Zollikofen}
+\referent{Dr. Frank Möhle\\Dozent bei der FFHS St. Gallen}
 \eingereichtBei{Dr.\ Oliver Kamin\\Departement Informatik\\Departementsleiter} 
 
 \dedication{Diese Thesis widme ich\\\dots}
@@ -24,9 +19,9 @@
 
 
 \begin{zusammenfassung}
-... Deutsche Zusammenfassung ...
+... Deutsche Zusammenfassung ... 
 \end{zusammenfassung}
-
+s
 \begin{abstract}
 ... English summary ...
 \end{abstract}
@@ -34,62 +29,34 @@
 \tableofcontents
 
 
-\begin{abkuerzungen}[MUSTER] % Das Muster dient zur Bestimmung der Einrueckungstiefe
-\item[DInf] Departement Informatik
+\begin{abkuerzungen}[MUSTER]
+\item[INF] Informatik
 \item[FFHS] Fernfachhochschule Schweiz
 \end{abkuerzungen}
 
+\startThesis
 
-\startThesis % Befehl muss vor dem ersten chapter stehen (Seitennummerierung!)
-
-\chapter{Einleitung}
-\section{Abc}
-
-Text
-
-\begin{figure}[ht]
-  \begin{center}
-  \includegraphics{ffhslogo}
-  \end{center}
-  \caption{Das FFHS-Logo}
-\end{figure}
-
-
-Mehr Text
- 
-\begin{table}[ht]
-  \begin{center}
-  \begin{tabular}{|c|c|c|c|}
-  \hline
-  F & F & H & S \\
-  \hline
-  \end{tabular}
-  \end{center}
-  \caption{Logo als Tabelle}
-\end{table}
-
-\chapter{Material}
-
-\chapter{Methoden}
-
-\chapter{Resultate}
-
+\input{chapter/1_einleitung}
+\input{chapter/2_modellgetriebene_modernisierung}
+\input{chapter/3_architekturgetriebene_modernisierung}
+\input{chapter/4_musterbasierte_prozessmodernisierung}
+\input{chapter/5_vergleich_modernisierungstechniken}
+\input{chapter/6_definition_voraussetzungen}
+\input{chapter/7_proof_of_concept}
+\input{chapter/8_diskussion}
 
 
 \listoffigures
 
 \listoftables
 
-\begin{thebibliography}{XX}
-\bibitem[XY]{XY} blah
-\end{thebibliography}
-
-% oder besser
-% \bibliography{myBibTeXFile.bib}
+\bibliography{references.bib}
+\bibliographystyle{ieeetr}
 
 \newpage
 
 \begin{appendix}
+\input{chapter/anhang}
 
 
 \chapter*{Selbstständigkeitserklärung}
